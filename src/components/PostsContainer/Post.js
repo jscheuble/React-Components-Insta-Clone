@@ -9,6 +9,17 @@ import "./Posts.css";
 const Post = props => {
   // set up state for the likes
   const [likes, setLikes] = useState(props.post.likes);
+  const [likesClass, setLikesClass] = useState('far');
+
+  const likesClick = () => {
+    if(likesClass === 'far') {
+      setLikesClass('fas liked');
+      setLikes(props.post.likes + 1)
+    } else {
+      setLikesClass('far');
+      setLikes(props.post.likes);
+    }
+  }
   
 
   return (
@@ -29,6 +40,8 @@ const Post = props => {
       <LikeSection 
         likes={likes}
         setLikes = {setLikes}
+        likesClass = {likesClass}
+        likesClick = {likesClick}
       />
       <CommentSection
         postId={props.post.imageUrl}
