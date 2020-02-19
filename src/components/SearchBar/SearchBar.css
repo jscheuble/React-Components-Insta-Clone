@@ -5,6 +5,8 @@
   justify-content: space-evenly;
   align-items: center;
   background: #ffffff;
+  width: 33%;
+  margin: 0 auto;
 }
 .search-form {
   width: 150px;
@@ -28,4 +30,13 @@
 
 .social {
   width: 50px;
+}
+
+#search {
+  width: 100%;
+  padding: 3%;
+}
+
+.fa-instagram {
+  margin-top: 100%;
 }
